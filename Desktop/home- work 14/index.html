@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>home-work 14</title>
+</head>
+<link rel="stylesheet" href="assets/style.css">
+<body>
+	
+		<!--задание 1-->
+		<div class="box">
+		  <button class="box__button_plus" type="button">+</button>
+	      <button class="box__button_minus" type="button">-</button>
+		  <div class="botton__value">0</div>
+		</div>
+
+		<div class="box">
+		  <button class="box__button_plus" type="button">+</button>
+		  <button class="box__button_minus" type="button">-</button>
+		  <div class="botton__value">0</div>
+		</div>
+
+		<div class="box">
+		  <button class="box__button_plus" type="button">+</button>
+		  <button class="box__button_minus" type="button">-</button>
+		  <div class="botton__value">0</div>
+		</div>
+
+		<div class="box">
+		  <button class="box__button_plus" type="button">+</button>
+		  <button class="box__button_minus" type="button">-</button>
+		  <div class="botton__value">0</div>
+		</div>
+
+		<div class="box">
+		  <button class="box__button_plus" type="button">+</button>
+		  <button class="box__button_minus" type="button">-</button>
+		  <div class="botton__value">0</div>
+		</div>
+
+		<br>
+
+		<!--задание 2-->
+		
+		<div class="box__light" style="background-color: #34ebd6">1</div>
+		<div class="box__light" style="background-color: #34ebd6">2</div>
+		<div class="box__light" style="background-color: #34ebd6">3</div>
+		<div class="box__light" style="background-color: #34ebd6">4</div>
+		<div class="box__light" style="background-color: #34ebd6">5</div>
+		
+	<script>
+		// задание 1
+		const $plus = document.querySelectorAll('.box__button_plus');
+		//console.log($plus)
+		const $minus = document.querySelectorAll('.box__button_minus');
+		//console.log($minus)
+		$plus.forEach(function(button){
+		  button.addEventListener('click',function Plus(event){
+		    let $value = event.currentTarget.parentElement.querySelector('.botton__value');
+			$value.textContent = Number($value.textContent)+1;
+			})
+		})
+
+		$minus.forEach(function(button){
+		  button.addEventListener('click',function Minus(event){
+		    let $value = event.currentTarget.parentElement.querySelector('.botton__value');
+			$value.textContent = Number($value.textContent)-1;
+			})
+		})
+		//Задание 2
+		//const colors = ['red','green','blue'];
+		const $box__light = document.querySelectorAll('.box__light');
+		//console.log($box__light)
+		$box__light.forEach(function(box){
+			box.addEventListener('click',function(event){
+				$actual_color = event.currentTarget.style.backgroundColor;
+
+				if($actual_color === 'red'){
+					event.currentTarget.style.backgroundColor = 'green';
+				} else if ($actual_color === 'green'){
+					event.currentTarget.style.backgroundColor = 'blue';
+				} else {
+					event.currentTarget.style.backgroundColor = 'red';
+				}
+				box.parentNode.removeChild(box);
+				document.body.append(box)
+				
+			})
+
+		})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+	
+
+</body>
+</html>

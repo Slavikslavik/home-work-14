@@ -1,0 +1,17 @@
+body{
+	background-color: grey;
+}
+
+div{
+	width: 100px;
+	height: 100px;
+	display: inline-block;
+	margin-right: 5px;
+	
+	margin-bottom: 40px;
+	background-color: lightblue;
+}
+.box__light{
+	font-size: 20px;
+	
+}
